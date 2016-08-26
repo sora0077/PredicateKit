@@ -8,12 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		D96C26BB1D6F28BF00298541 /* PredicateKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D96C26B91D6F28BF00298541 /* PredicateKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D96C26C31D6F291D00298541 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C26C21D6F291D00298541 /* Attribute.swift */; };
+		D96C26C51D6F34FF00298541 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C26C41D6F34FF00298541 /* Expression.swift */; };
+		D96C26C71D7087BD00298541 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C26C61D7087BD00298541 /* Predicate.swift */; };
+		D96C26D11D7089A600298541 /* PredicateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D96C26B61D6F28BF00298541 /* PredicateKit.framework */; };
+		D96C26D81D7089E400298541 /* AttributeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C26D71D7089E400298541 /* AttributeTests.swift */; };
+		D96C26DA1D708C7C00298541 /* ExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C26D91D708C7C00298541 /* ExpressionTests.swift */; };
+		D96C26DC1D708D5900298541 /* PredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C26DB1D708D5900298541 /* PredicateTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D96C26D21D7089A600298541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D96C26AD1D6F28BF00298541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D96C26B51D6F28BF00298541;
+			remoteInfo = PredicateKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D96C26B61D6F28BF00298541 /* PredicateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PredicateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96C26B91D6F28BF00298541 /* PredicateKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PredicateKit.h; sourceTree = "<group>"; };
 		D96C26BA1D6F28BF00298541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D96C26C21D6F291D00298541 /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		D96C26C41D6F34FF00298541 /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
+		D96C26C61D7087BD00298541 /* Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
+		D96C26CC1D7089A600298541 /* PredicateKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PredicateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96C26D01D7089A600298541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D96C26D71D7089E400298541 /* AttributeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeTests.swift; sourceTree = "<group>"; };
+		D96C26D91D708C7C00298541 /* ExpressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionTests.swift; sourceTree = "<group>"; };
+		D96C26DB1D708D5900298541 /* PredicateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,13 +49,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D96C26C91D7089A600298541 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D96C26D11D7089A600298541 /* PredicateKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D96C26AC1D6F28BF00298541 = {
 			isa = PBXGroup;
 			children = (
+				D96C26C11D6F290400298541 /* Sources */,
 				D96C26B81D6F28BF00298541 /* PredicateKit */,
+				D96C26CD1D7089A600298541 /* PredicateKitTests */,
 				D96C26B71D6F28BF00298541 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D96C26B61D6F28BF00298541 /* PredicateKit.framework */,
+				D96C26CC1D7089A600298541 /* PredicateKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,6 +86,27 @@
 				D96C26BA1D6F28BF00298541 /* Info.plist */,
 			);
 			path = PredicateKit;
+			sourceTree = "<group>";
+		};
+		D96C26C11D6F290400298541 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D96C26C21D6F291D00298541 /* Attribute.swift */,
+				D96C26C41D6F34FF00298541 /* Expression.swift */,
+				D96C26C61D7087BD00298541 /* Predicate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D96C26CD1D7089A600298541 /* PredicateKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				D96C26D01D7089A600298541 /* Info.plist */,
+				D96C26D71D7089E400298541 /* AttributeTests.swift */,
+				D96C26D91D708C7C00298541 /* ExpressionTests.swift */,
+				D96C26DB1D708D5900298541 /* PredicateTests.swift */,
+			);
+			path = PredicateKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +141,40 @@
 			productReference = D96C26B61D6F28BF00298541 /* PredicateKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D96C26CB1D7089A600298541 /* PredicateKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D96C26D41D7089A600298541 /* Build configuration list for PBXNativeTarget "PredicateKitTests" */;
+			buildPhases = (
+				D96C26C81D7089A600298541 /* Sources */,
+				D96C26C91D7089A600298541 /* Frameworks */,
+				D96C26CA1D7089A600298541 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D96C26D31D7089A600298541 /* PBXTargetDependency */,
+			);
+			name = PredicateKitTests;
+			productName = PredicateKitTests;
+			productReference = D96C26CC1D7089A600298541 /* PredicateKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D96C26AD1D6F28BF00298541 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = jp.sora0077;
 				TargetAttributes = {
 					D96C26B51D6F28BF00298541 = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					D96C26CB1D7089A600298541 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -112,12 +193,20 @@
 			projectRoot = "";
 			targets = (
 				D96C26B51D6F28BF00298541 /* PredicateKit */,
+				D96C26CB1D7089A600298541 /* PredicateKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D96C26B41D6F28BF00298541 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96C26CA1D7089A600298541 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,10 +220,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96C26C31D6F291D00298541 /* Attribute.swift in Sources */,
+				D96C26C71D7087BD00298541 /* Predicate.swift in Sources */,
+				D96C26C51D6F34FF00298541 /* Expression.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96C26C81D7089A600298541 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D96C26D81D7089E400298541 /* AttributeTests.swift in Sources */,
+				D96C26DA1D708C7C00298541 /* ExpressionTests.swift in Sources */,
+				D96C26DC1D708D5900298541 /* PredicateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D96C26D31D7089A600298541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D96C26B51D6F28BF00298541 /* PredicateKit */;
+			targetProxy = D96C26D21D7089A600298541 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D96C26BC1D6F28BF00298541 /* Debug */ = {
@@ -239,6 +349,27 @@
 		D96C26BF1D6F28BF00298541 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PredicateKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.PredicateKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D96C26C01D6F28BF00298541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -252,22 +383,26 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
-			name = Debug;
+			name = Release;
 		};
-		D96C26C01D6F28BF00298541 /* Release */ = {
+		D96C26D51D7089A600298541 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PredicateKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = PredicateKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.PredicateKit;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.PredicateKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D96C26D61D7089A600298541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PredicateKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.PredicateKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -289,6 +424,14 @@
 			buildConfigurations = (
 				D96C26BF1D6F28BF00298541 /* Debug */,
 				D96C26C01D6F28BF00298541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D96C26D41D7089A600298541 /* Build configuration list for PBXNativeTarget "PredicateKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D96C26D51D7089A600298541 /* Debug */,
+				D96C26D61D7089A600298541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
