@@ -5,7 +5,6 @@
 
 import Foundation
 
-
 /// Returns an and predicate from the given predicates
 public func && (left: NSPredicate, right: NSPredicate) -> NSPredicate {
     return NSCompoundPredicate(type: .and, subpredicates: [left, right])
@@ -20,5 +19,3 @@ public func || (left: NSPredicate, right: NSPredicate) -> NSPredicate {
 prefix public func ! (left: NSPredicate) -> NSPredicate {
     return NSCompoundPredicate(type: .not, subpredicates: [left])
 }
-
-
