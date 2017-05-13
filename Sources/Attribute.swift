@@ -6,8 +6,16 @@
 import Foundation
 
 /// An attribute, representing an attribute on a model
-public struct Attribute<AttributeType> {
+public struct Attribute<AttributeType: PredicateKit.AttributeType> {
     public let key: String
+
+    public var ascending: NSSortDescriptor {
+        return NSSortDescriptor(key: key, ascending: true)
+    }
+
+    public var descending: NSSortDescriptor {
+        return NSSortDescriptor(key: key, ascending: false)
+    }
 
     public init(_ key: String) {
         self.key = key
@@ -23,23 +31,12 @@ public struct Attribute<AttributeType> {
         return NSExpression(forKeyPath: key)
     }
 
-    public func ascending() -> NSSortDescriptor {
-        return NSSortDescriptor(key: key, ascending: true)
-    }
-
-    public func descending() -> NSSortDescriptor {
-        return NSSortDescriptor(key: key, ascending: false)
-    }
-
     public func attribute<T>(attribute: Attribute<T>) -> Attribute<T> {
         return Attribute<T>(attributes: key, attribute.key)
     }
 
     func expressionForValue(value: AttributeType?) -> NSExpression {
-        if let value = value as? NSObject {
-            return NSExpression(forConstantValue: value)
-        }
-        return NSExpression(forConstantValue: NSNull())
+        return value?.expression ?? NSExpression(forConstantValue: NSNull())
     }
 
 }

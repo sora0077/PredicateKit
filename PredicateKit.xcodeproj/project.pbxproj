@@ -15,6 +15,7 @@
 		D96C26D81D7089E400298541 /* AttributeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C26D71D7089E400298541 /* AttributeTests.swift */; };
 		D96C26DA1D708C7C00298541 /* ExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C26D91D708C7C00298541 /* ExpressionTests.swift */; };
 		D96C26DC1D708D5900298541 /* PredicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96C26DB1D708D5900298541 /* PredicateTests.swift */; };
+		D9C359011EC74FAC000A2BE2 /* AttributeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C359001EC74FAC000A2BE2 /* AttributeType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		D96C26D71D7089E400298541 /* AttributeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeTests.swift; sourceTree = "<group>"; };
 		D96C26D91D708C7C00298541 /* ExpressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionTests.swift; sourceTree = "<group>"; };
 		D96C26DB1D708D5900298541 /* PredicateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateTests.swift; sourceTree = "<group>"; };
+		D9C359001EC74FAC000A2BE2 /* AttributeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D96C26C21D6F291D00298541 /* Attribute.swift */,
+				D9C359001EC74FAC000A2BE2 /* AttributeType.swift */,
 				D96C26C41D6F34FF00298541 /* Expression.swift */,
 				D96C26C61D7087BD00298541 /* Predicate.swift */,
 			);
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C359011EC74FAC000A2BE2 /* AttributeType.swift in Sources */,
 				D96C26C31D6F291D00298541 /* Attribute.swift in Sources */,
 				D96C26C71D7087BD00298541 /* Predicate.swift in Sources */,
 				D96C26C51D6F34FF00298541 /* Expression.swift in Sources */,

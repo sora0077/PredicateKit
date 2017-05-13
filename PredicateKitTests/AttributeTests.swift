@@ -37,11 +37,11 @@ class AttributeTests: XCTestCase {
     // Sorting
 
     func testAscendingSortDescriptor() {
-        XCTAssertEqual(attribute.ascending(), NSSortDescriptor(key: "age", ascending: true))
+        XCTAssertEqual(attribute.ascending, NSSortDescriptor(key: "age", ascending: true))
     }
 
     func testDescendingSortDescriptor() {
-        XCTAssertEqual(attribute.descending(), NSSortDescriptor(key: "age", ascending: false))
+        XCTAssertEqual(attribute.descending, NSSortDescriptor(key: "age", ascending: false))
     }
 
     // Operators
@@ -92,19 +92,13 @@ class AttributeTests: XCTestCase {
     }
 
     func testOptionalEqualityOperator() {
-        let attribute = Attribute<String?>("name")
-        let predicate = attribute == "kyle"
-        XCTAssertEqual(predicate, NSPredicate(format: "name == 'kyle'"))
-    }
-
-    func testOptionalNSObjectEqualityOperator() {
-        let attribute = Attribute<NSString?>("name")
+        let attribute = Attribute<String>("name")
         let predicate = attribute == "kyle"
         XCTAssertEqual(predicate, NSPredicate(format: "name == 'kyle'"))
     }
 
     func testEqualityOperatorWithNilRHS() {
-        let attribute = Attribute<String?>("name")
+        let attribute = Attribute<String>("name")
         let predicate = attribute == nil
         XCTAssertEqual(predicate.description, "name == <null>")
     }
