@@ -107,8 +107,7 @@ class AttributeTests: XCTestCase {
 class CollectionAttributeTests: XCTestCase {
 
     func testCountOfSet() {
-        let setAttribute = Attribute<Set<String>>("names")
-        let countAttribute = count(setAttribute)
-        XCTAssertEqual(countAttribute, Attribute<Int>("names.@count"))
+        let attribute = Attribute<Set<String>>("names")
+        XCTAssertEqual(attribute.count, Attribute<Int>("names.@count"))
     }
 }

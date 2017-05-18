@@ -93,7 +93,8 @@ prefix public func ! (left: Attribute<Bool>) -> NSPredicate {
     return left == false
 }
 
-public func count<C: Collection>(_ attribute: Attribute<C>) -> Attribute<Int>
-    where C.Iterator.Element: Hashable {
-    return Attribute<Int>(attributes: attribute.key, "@count")
+extension Attribute where AttributeType: Collection, AttributeType.Iterator.Element: Hashable {
+    public var count: Attribute<Int> {
+        return Attribute<Int>(attributes: key, "@count")
+    }
 }

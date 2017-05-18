@@ -12,17 +12,43 @@ public protocol AttributeType {
     var expression: NSExpression { get }
 }
 
-extension AttributeType {
+extension Bool: AttributeType {
     public var expression: NSExpression {
         return NSExpression(forConstantValue: self)
     }
 }
-
-extension Bool: AttributeType {}
-extension String: AttributeType {}
-extension Int: AttributeType {}
-extension Float: AttributeType {}
-extension Double: AttributeType {}
-
-extension Array: AttributeType {}
-extension Set: AttributeType {}
+extension String: AttributeType {
+    public var expression: NSExpression {
+        return NSExpression(forConstantValue: self)
+    }
+}
+extension Int: AttributeType {
+    public var expression: NSExpression {
+        return NSExpression(forConstantValue: self)
+    }
+}
+extension Float: AttributeType {
+    public var expression: NSExpression {
+        return NSExpression(forConstantValue: self)
+    }
+}
+extension Double: AttributeType {
+    public var expression: NSExpression {
+        return NSExpression(forConstantValue: self)
+    }
+}
+extension Date: AttributeType {
+    public var expression: NSExpression {
+        return NSExpression(forConstantValue: self)
+    }
+}
+extension Array: AttributeType {
+    public var expression: NSExpression {
+        return NSExpression(forConstantValue: self)
+    }
+}
+extension Set: AttributeType {
+    public var expression: NSExpression {
+        return NSExpression(forConstantValue: self)
+    }
+}
